@@ -5,6 +5,7 @@ Often you will run an existing container / tool with the [job executor service](
 
 - [Prometheus Integration](prometheus.md)
 - [Dynatrace Integration](TODO)
+- Another backend? Bring it on. See [contributing](#contributing).
 
 Rather than directly running your container image, you'll need to wrap it in a "parent script" and run that parent script instead (shell scripts, python scripts, powershell scripts etc.).
 
@@ -14,7 +15,7 @@ The samples in this repository use Python, but the instructions should provide e
 See [instructions here](prometheus.md)
 
 ## Push Metrics to Dynatrace
-TODO
+See [instructions here](dynatrace.md)
 
 ## Contributing
 
