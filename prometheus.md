@@ -4,6 +4,8 @@
 
 Push metrics from any job executor service job to Prometheus using a [Prometheus Push Gateway](https://prometheus.io/docs/instrumenting/pushing/).
 
+You must, of course, have a push gateway available.
+
 A Python base image with the requests module & the [prometheus client](https://pypi.org/project/prometheus-client/) is required.
 
 You can use [gardnera/python:requests_prometheus_client](https://hub.docker.com/r/gardnera/python/tags) (rarely updated) or build your own (recommended):
