@@ -33,6 +33,8 @@ actions:
           - "/keptn/files/app.py"
 ```
 
+If you need help with the job executor file syntax, [go here](https://github.com/keptn-contrib/job-executor-service/blob/main/docs/FEATURES.md).
+
 Finally, create the `app.py` file using the following boilerplate.
 
 Store it in the Keptn Git upstream on the relevant branch under: `<service-name>/files/app.py`
