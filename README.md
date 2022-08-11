@@ -23,5 +23,5 @@ See [instructions here](dynatrace.md).
 ## Contributing
 
 - Enhancements: Contributions welcome! Create a Pull Request. 
-- Bugs: Create an issue.
+- Bugs: [Create an issue](https://github.com/agardnerIT/jes-metric-exporter/issues/new).
 - Assistance / Questions: Join [Keptn on Slack](https://slack.keptn.sh) and ask for help in `#keptn-integrations`
