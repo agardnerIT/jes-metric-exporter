@@ -117,7 +117,7 @@ some_list = [{
 # line format is like:
 # keptn_<IntegrationName>_<MetricName>,ci_platform=keptn,keptn_project=<KeptnProjectName>,keptn_service=<KeptnServiceName>,keptn_stage=<KeptnStageName> <MetricValue>
 # For example:
-# keptn_infracost_diffTotalMonthlyCost,ci_platform=keptn,keptn_project=project1,keptn_service=microserviceA,keptn_stage=dev 912.21
+# keptn_infracost_metric1,ci_platform=keptn,keptn_project=projectA,keptn_service=service1,keptn_stage=dev 42
 
 metric_string = ""
 for datapoint in some_list:
