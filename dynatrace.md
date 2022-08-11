@@ -73,6 +73,8 @@ If you need help with the job executor file syntax, [go here](https://github.com
 
 The following is a sample Python script. Obviously you will need to adjust for your data and requirements.
 
+Store this file in the Keptn Git upstream on the relevant branch under: `<service-name>/files/app.py`
+  
 ```
 import requests
 import os
@@ -81,9 +83,11 @@ import os
 #####################
 # The name of this integration. It will form part of the metric name. Eg. infracost
 INTEGRATION_NAME = "infracost"
+
 ############################
 # End configurable values  #
 ############################
+
 # These variables are passed to job-executor-service automatically on job startup
 # So you can assume they're available
 KEPTN_PROJECT = os.getenv("KEPTN_PROJECT", "NULL")
@@ -92,9 +96,11 @@ KEPTN_STAGE = os.getenv("KEPTN_STAGE", "NULL")
 # Available due to secret
 DT_TENANT = os.getenv("DT_TENANT","NULL")
 DT_API_TOKEN = os.getenv("DT_API_TOKEN","NULL")
+
 ########################
 # Do your work here... #
 ########################
+
 #################################################################
 # Create Dynatrace compatible metrics string                    #
 # This is a sample only                                         #
@@ -105,7 +111,14 @@ some_list = [{
     "name": "metric1",
     "value": 42
 }]
+
 # Assumes you have a data structure with metric_name and metric_value available
+# Adds metrics one line at a time to metric_string
+# line format is like:
+# keptn_<IntegrationName>_<MetricName>,ci_platform=keptn,keptn_project=<KeptnProjectName>,keptn_service=<KeptnServiceName>,keptn_stage=<KeptnStageName> <MetricValue>
+# For example:
+# keptn_infracost_diffTotalMonthlyCost,ci_platform=keptn,keptn_project=project1,keptn_service=microserviceA,keptn_stage=dev 912.21
+
 metric_string = ""
 for datapoint in some_list:
   metric_name = datapoint['name']
@@ -122,6 +135,7 @@ headers = {
     "Authorization": f"Api-Token {DT_API_TOKEN}",
     "Content-Type": "text/plain; charset=utf-8"
 }
+
 dt_response = requests.post(url=f"{DT_TENANT}/api/v2/metrics/ingest",headers=headers, data=metric_string)
 print(dt_response.status_code) # should be a 202
 print(dt_response.text) # {"linesOK": 1, "linesInvalid": 0, "error": null, "warnings": null}
