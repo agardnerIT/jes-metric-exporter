@@ -6,7 +6,7 @@ Push metrics from any job executor service job to Prometheus using a [Prometheus
 
 A Python base image with the requests module & the [prometheus client](https://pypi.org/project/prometheus-client/) is required.
 
-You can use [gardnera/python:requests_prometheus_client](https://hub.docker.com/r/gardnera/python/tags) (rarely updated) or build your own:
+You can use [gardnera/python:requests_prometheus_client](https://hub.docker.com/r/gardnera/python/tags) (rarely updated) or build your own (recommended):
 ```
 FROM python:slim
 RUN pip install requests
