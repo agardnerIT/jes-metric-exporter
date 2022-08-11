@@ -12,10 +12,10 @@ Rather than directly running your container image, you'll need to wrap it in a "
 The samples in this repository use Python, but the instructions should provide enough information to adapt to any language you prefer.
 
 ## Push Metrics to Prometheus
-See [instructions here](prometheus.md)
+See [instructions here](prometheus.md).
 
 ## Push Metrics to Dynatrace
-See [instructions here](dynatrace.md)
+See [instructions here](dynatrace.md).
 
 ## Contributing
 
