@@ -12,7 +12,7 @@ Rather than directly running your container image, you'll need to wrap it in a "
 The samples in this repository use Python, but the instructions should provide enough information to adapt to any language you prefer.
 
 ## Demo
-Coming soon...
+Watch a demo here: `https://www.youtube.com/watch?v=L8AWjCAHv-4`
 
 ## Push Metrics to Prometheus
 See [instructions here](prometheus.md).
